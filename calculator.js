@@ -31,3 +31,6 @@ function add (a, b) {
         } 
     };
     
+    // function operate(a, operator, b) {
+    // a operator b   
+    // };
