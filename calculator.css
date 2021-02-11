@@ -1,0 +1,23 @@
+#calculatorBody{
+    height:500px;
+    width: 243px;
+}
+
+#calcDisplay{
+    width: 241px;
+    height:40px;
+    text-align: right;
+    border: 1px solid grey;
+    font-size: 32px;
+}
+
+#buttons {
+    display:grid;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-gap: 1px;
+}
+.buttons{ 
+    height: 60px;
+    width: 60px;
+}
