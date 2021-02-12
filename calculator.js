@@ -1,6 +1,8 @@
     let a = 0
     let  b = 0
     let selectedNumber = [];
+    let firstNumber = 0
+    let secondNumber = 0
 
     function add (a, b) {
     return (a + b);	
@@ -14,15 +16,18 @@
     return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
     };
     
-    function multiply (array) {
-    return array.reduce((accumulator, currentValue) => accumulator * currentValue)
-    };
+    function multiply (a, b) {
+        return (a * b);
+    }
+   // function multiply (array) {
+   // return array.reduce((accumulator, currentValue) => accumulator * currentValue)
+   // };
 
     function divide (a, b) {
         return (a / b);
     }
     
-    function power(a, b) {
+    function power (a, b) {
         return (a ** b);
     };
     
@@ -35,8 +40,6 @@
         } 
     };
     
-
-
     //Number One
     let oneButton = document.querySelector('#one')
     oneButton.addEventListener('click', oneButtonFunc)
@@ -154,6 +157,37 @@
             document.querySelector('.calcDisplayDiv').innerHTML = ''
         }
 
-    // function operate(a, operator, b) {
-    // a operator b   
-    // };
+        //Add button
+        let addButton = document.querySelector('#add');
+        addButton.addEventListener('click', addFunction)
+
+        function addFunction() {
+            firstNumber = parseInt(selectedNumber.join(''));
+            console.log(firstNumber);
+            clearButtonFunc();
+            console.log(selectedNumber);
+            console.log(operator);
+        }
+
+        //Equals button
+        let equalsButton = document.querySelector('#equals');
+        equalsButton.addEventListener('click', equalsFunction)
+
+        function equalsFunction() {
+            secondNumber = parseInt(selectedNumber.join(''));
+            console.log(secondNumber);
+            clearButtonFunc();
+            //operate();
+            let answer = add(firstNumber, secondNumber)
+            console.log(answer);
+            document.querySelector('.calcDisplayDiv').innerHTML = answer;
+
+        }
+
+     //operate function   
+     function operate() {
+     operator;
+     console.log(operator);
+     };
+
+     function operator() {};

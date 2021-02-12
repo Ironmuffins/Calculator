@@ -1,6 +1,5 @@
 New features:
-User can now type numbers longer than one digit.
-Fixed bug on clear function.
+Add button functions(need to re-work)
 
 Existing features:
 Basic html and css components completed.
@@ -8,9 +7,10 @@ Javascript math functions work.
 Selected numbers appear in display when clicked.
 Clear button functions.
 Can now type multiple digit numbers, which is stored in array.
+Both first and second numbers are stored correctly.
 
 Future features:
-Will add, 
+Will add with operate function, 
 subtract, 
 multiply, 
 divide, 
