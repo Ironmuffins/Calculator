@@ -1,11 +1,13 @@
 New features:
-Clear button now functions
+User can now type numbers longer than one digit.
+Fixed bug on clear function.
 
 Existing features:
 Basic html and css components completed.
 Javascript math functions work.
 Selected numbers appear in display when clicked.
 Clear button functions.
+Can now type multiple digit numbers, which is stored in array.
 
 Future features:
 Will add, 

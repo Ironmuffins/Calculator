@@ -1,6 +1,6 @@
     let a = 0
     let  b = 0
-    let selectedNumber = 0
+    let selectedNumber = [];
 
     function add (a, b) {
     return (a + b);	
@@ -42,8 +42,8 @@
     oneButton.addEventListener('click', oneButtonFunc)
     
     function oneButtonFunc() {
-        let selectedNumber = 1
-        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+        selectedNumber.push(1);
+        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
         console.log('1')
     }
 
@@ -52,8 +52,8 @@
     twoButton.addEventListener('click', twoButtonFunc)
     
     function twoButtonFunc() {
-        let selectedNumber = 2
-        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+        selectedNumber.push(2);
+        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
         console.log('2')
 
     }
@@ -62,8 +62,8 @@
     threeButton.addEventListener('click', threeButtonFunc)
     
     function threeButtonFunc() {
-        let selectedNumber = 3
-        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+        selectedNumber.push(3);
+        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
         console.log('3')
 
     }
@@ -73,8 +73,8 @@
      fourButton.addEventListener('click', fourButtonFunc)
      
      function fourButtonFunc() {
-         let selectedNumber = 4
-         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+        selectedNumber.push(4);
+         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
          console.log('4')
  
      }
@@ -84,9 +84,9 @@
       fiveButton.addEventListener('click', fiveButtonFunc)
       
       function fiveButtonFunc() {
-          let selectedNumber = 5
-          document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
-          console.log('5')
+        selectedNumber.push(5);
+        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+        console.log('5')
   
       }
 
@@ -95,8 +95,8 @@
         sixButton.addEventListener('click', sixButtonFunc)
         
         function sixButtonFunc() {
-            let selectedNumber = 6
-            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+            selectedNumber.push(6);
+            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
             console.log('6')
     
         }
@@ -106,8 +106,8 @@
         sevenButton.addEventListener('click', sevenButtonFunc)
         
         function sevenButtonFunc() {
-            let selectedNumber = 7
-            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+            selectedNumber.push(7);
+            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
             console.log('7')
     
         }
@@ -117,8 +117,8 @@
         eightButton.addEventListener('click', eightButtonFunc)
          
         function eightButtonFunc() {
-            let selectedNumber = 8
-            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+            selectedNumber.push(8);
+            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
             console.log('8')
      
          }
@@ -128,8 +128,8 @@
         nineButton.addEventListener('click', nineButtonFunc)
          
         function nineButtonFunc() {
-            let selectedNumber = 9
-            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+            selectedNumber.push(9);
+            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
             console.log('9')
      
          }
@@ -139,10 +139,10 @@
         zeroButton.addEventListener('click', zeroButtonFunc)
           
         function zeroButtonFunc() {
-            let selectedNumber = 0
-            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber;
+            selectedNumber.push(0);
+            document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
             console.log('0')
-      
+
           } 
     
         //Clear button
@@ -150,8 +150,8 @@
         clearButton.addEventListener('click', clearButtonFunc);
 
         function clearButtonFunc() {
+            selectedNumber = []
             document.querySelector('.calcDisplayDiv').innerHTML = ''
-
         }
 
     // function operate(a, operator, b) {
