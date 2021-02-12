@@ -1,7 +1,8 @@
 New features:
-Add button functions(need to re-work)
+Add, subtract, multiply, and divide now work!
 
 Existing features:
+Add, subtract, multiply, and divide work.
 Basic html and css components completed.
 Javascript math functions work.
 Selected numbers appear in display when clicked.
@@ -10,10 +11,7 @@ Can now type multiple digit numbers, which is stored in array.
 Both first and second numbers are stored correctly.
 
 Future features:
-Will add with operate function, 
-subtract, 
-multiply, 
-divide, 
+Ability to string operations together
 get factorial, 
 and get power.
 Will change sign
