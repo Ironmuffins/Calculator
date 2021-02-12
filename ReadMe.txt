@@ -1,13 +1,13 @@
 New features:
-when selecting a number, it appears in the display.
+Clear button now functions
 
 Existing features:
 Basic html and css components completed.
 Javascript math functions work.
 Selected numbers appear in display when clicked.
+Clear button functions.
 
 Future features:
-Will clear display
 Will add, 
 subtract, 
 multiply, 

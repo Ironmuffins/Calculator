@@ -145,6 +145,14 @@
       
           } 
     
+        //Clear button
+        let clearButton = document.querySelector('#clear');
+        clearButton.addEventListener('click', clearButtonFunc);
+
+        function clearButtonFunc() {
+            document.querySelector('.calcDisplayDiv').innerHTML = ''
+
+        }
 
     // function operate(a, operator, b) {
     // a operator b   
