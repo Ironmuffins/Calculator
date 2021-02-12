@@ -1,13 +1,12 @@
 New features:
-Buttons on calculator are now arranged in a better looking grid.
-Display is larger.
+when selecting a number, it appears in the display.
 
 Existing features:
 Basic html and css components completed.
 Javascript math functions work.
+Selected numbers appear in display when clicked.
 
 Future features:
-Will display numbers when pressed.
 Will clear display
 Will add, 
 subtract, 

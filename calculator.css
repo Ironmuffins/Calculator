@@ -3,7 +3,7 @@
     width: 243px;
 }
 
-#calcDisplay{
+.calcDisplayDiv{
     width: 241px;
     height:40px;
     text-align: right;
@@ -20,4 +20,8 @@
 .buttons{ 
     height: 60px;
     width: 60px;
+}
+
+#diplayone {
+    content: 1
 }
