@@ -1,7 +1,7 @@
 let selectedNumber = [];
-let firstNumber = 0
-let secondNumber = 0
-let operator = ''
+let firstNumber = 0;
+let secondNumber = 0;
+let operator = '';
     
 //Number One
 let oneButton = document.querySelector('#one');
@@ -97,7 +97,7 @@ addButton.addEventListener('click', addFunction);
        
 function addFunction() {
     firstNumber = parseInt(selectedNumber.join(''));
-    clearButtonFunc();
+    selectedNumber = [];
     operator = '+';
 };
 //Subtract button
@@ -106,7 +106,7 @@ subtractButton.addEventListener('click', subtractFunction);
        
 function subtractFunction() {
     firstNumber = parseInt(selectedNumber.join(''));
-    clearButtonFunc();
+    selectedNumber = [];
     operator = '-';
 };
 //Multiply button
@@ -115,7 +115,7 @@ multiplyButton.addEventListener('click', multiplyFunction);
         
 function multiplyFunction() {
     firstNumber = parseInt(selectedNumber.join(''));
-    clearButtonFunc();
+    selectedNumber = [];
     operator = '*';
 };
 //Divide button
@@ -124,16 +124,35 @@ divideButton.addEventListener('click', divideFunction);
         
 function divideFunction() {
     firstNumber = parseInt(selectedNumber.join(''));
-    clearButtonFunc();
+    selectedNumber = [];
     operator = '/';
 };
+//Exponent button
+let exponentButton = document.querySelector('#exponent');
+exponentButton.addEventListener('click', exponentFunc);
+
+function exponentFunc() {
+    firstNumber = parseInt(selectedNumber.join(''));
+    selectedNumber = [];
+    operator = '**';
+};
+//Factorial Button
+//let factorialButton = document.querySelector('#factorial');
+//factorialButton.addEventListener('click', factorialFunc);
+
+//function factorialFunc() {
+//    firstNumber = parseInt(selectedNumber.join(''));
+//    selectedNumber = [];
+//    operator = '!';
+//}
+
 //Equals button
 let equalsButton = document.querySelector('#equals');
 equalsButton.addEventListener('click', equalsFunction);
 
 function equalsFunction() {
     secondNumber = parseInt(selectedNumber.join(''));
-    clearButtonFunc();
+    selectedNumber = [];
     let answer = operators[operator](firstNumber, secondNumber);
     document.querySelector('.calcDisplayDiv').innerHTML = answer;
 };
@@ -144,6 +163,8 @@ let operators = {
     '-': function(a,b){return a - b},
     '*': function(a,b){return a * b},
     '/': function(a,b){return a / b},
+    '**': function(a,b){return a ** b},
+    //'!': function(a){if (a === 0 || a === 1) {return 1;}else{return (a * this(a - 1));}},      
 };
 
 //  function sum (array) {
@@ -153,10 +174,6 @@ let operators = {
 // function multiply (array) {
 // return array.reduce((accumulator, currentValue) => accumulator * currentValue)
 // };
-
-//   function power (a, b) {
-//       return (a ** b);
-//   };
     
 //   function factorial(a) {
 //       if (a === 0 || a === 1) {
@@ -166,3 +183,4 @@ let operators = {
 //       return (a * factorial(a - 1));
 //       } 
 //   };
+
