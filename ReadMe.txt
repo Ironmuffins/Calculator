@@ -1,5 +1,8 @@
 New features:
-User can now use decimals for calculations.
+None
+
+Bug fixes:
+Decimal answers no longer spill out of display.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.

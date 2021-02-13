@@ -98,7 +98,7 @@ addButton.addEventListener('click', addFunction);
 function addFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
         answer = 0;
         operator = '+';
     }
@@ -106,7 +106,7 @@ function addFunction() {
         secondNumber = parseFloat(selectedNumber.join(''));
         selectedNumber = [];
         answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
         firstNumber = answer;
         answer = 0;
         secondNumber = 0;
@@ -124,7 +124,7 @@ subtractButton.addEventListener('click', subtractFunction);
 function subtractFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
         answer = 0;
         operator = '-';
     }
@@ -132,7 +132,7 @@ function subtractFunction() {
         secondNumber = parseFloat(selectedNumber.join(''));
         selectedNumber = [];
         answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
         firstNumber = answer;
         answer = 0;
         secondNumber = 0;
@@ -150,7 +150,7 @@ multiplyButton.addEventListener('click', multiplyFunction);
 function multiplyFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
         answer = 0;
         operator = '*';
     }
@@ -158,7 +158,7 @@ function multiplyFunction() {
         secondNumber = parseFloat(selectedNumber.join(''));
         selectedNumber = [];
         answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
         firstNumber = answer;
         answer = 0;
         secondNumber = 0;
@@ -176,14 +176,14 @@ divideButton.addEventListener('click', divideFunction);
 function divideFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
         answer = 0;
         operator = '/';
     }
     else if (firstNumber) {
         secondNumber = parseFloat(selectedNumber.join(''));
         answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
         selectedNumber = [];
         secondNumber = 0;
         firstNumber = answer;
@@ -213,7 +213,7 @@ function equalsFunction() {
     }
     if (secondNumber) {
         answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
         selectedNumber = [];
         firstNumber = 0;
         secondNumber = 0;
