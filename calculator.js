@@ -3,8 +3,7 @@ let selectedNumber = [];
 let firstNumber = 0;
 let secondNumber = 0;
 let answer = 0;
-let operator = '';
-    
+let operator = '';   
 //Number One
 let oneButton = document.querySelector('#one');
 oneButton.addEventListener('click', oneButtonFunc);
@@ -126,6 +125,10 @@ function addFunction() {
     }
     else if (firstNumber) {
         secondNumber = parseFloat(selectedNumber.join(''));
+        if ((secondNumber === 0) && (operator == '/')) {
+            document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
+        }
+        else{
         selectedNumber = [];
         answer = operators[operator](firstNumber, secondNumber);
         document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
@@ -133,6 +136,7 @@ function addFunction() {
         answer = 0;
         secondNumber = 0;
         operator = '+';
+        }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));
@@ -152,6 +156,10 @@ function subtractFunction() {
     }
     else if (firstNumber) {
         secondNumber = parseFloat(selectedNumber.join(''));
+        if ((secondNumber === 0) && (operator == '/')) {
+            document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
+        }
+        else{
         selectedNumber = [];
         answer = operators[operator](firstNumber, secondNumber);
         document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
@@ -159,6 +167,7 @@ function subtractFunction() {
         answer = 0;
         secondNumber = 0;
         operator = '-';
+        }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));
@@ -178,6 +187,10 @@ function multiplyFunction() {
     }
     else if (firstNumber) {
         secondNumber = parseFloat(selectedNumber.join(''));
+        if ((secondNumber === 0) && (operator == '/')) {
+            document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
+        }
+        else{
         selectedNumber = [];
         answer = operators[operator](firstNumber, secondNumber);
         document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
@@ -185,6 +198,7 @@ function multiplyFunction() {
         answer = 0;
         secondNumber = 0;
         operator = '*';
+        }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));
@@ -204,6 +218,10 @@ function divideFunction() {
     }
     else if (firstNumber) {
         secondNumber = parseFloat(selectedNumber.join(''));
+        if ((secondNumber === 0) && (operator == '/')) {
+            document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
+        }
+        else {
         answer = operators[operator](firstNumber, secondNumber);
         document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
         selectedNumber = [];
@@ -211,6 +229,7 @@ function divideFunction() {
         firstNumber = answer;
         answer = 0;
         operator = '/';
+        }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));
@@ -230,15 +249,23 @@ function exponentFunc() {
 let equalsButton = document.querySelector('#equals');
 equalsButton.addEventListener('click', equalsFunction);
 function equalsFunction() {
-    if (firstNumber) {
-    secondNumber = parseFloat(selectedNumber.join(''));
+    if (answer) {
+        firstNumber = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
+        answer = 0;
     }
-    if (secondNumber) {
+    else if (firstNumber) {
+        secondNumber = parseFloat(selectedNumber.join(''));
+        if ((secondNumber === 0) && (operator == '/')) {
+            document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
+        }
+        else {
         answer = operators[operator](firstNumber, secondNumber);
         document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
         selectedNumber = [];
         firstNumber = 0;
         secondNumber = 0;
+        }
     }
 };
 //Operators
