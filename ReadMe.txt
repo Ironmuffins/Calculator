@@ -2,7 +2,7 @@ New features:
 None
 
 Bug fixes:
-Decimal answers no longer spill out of display.
+User can no longer overflow display by inputting more numbers than can fit.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
@@ -13,7 +13,6 @@ Selected numbers appear in display when clicked.
 Clear button functions.
 
 Future features:
-Round numbers with long decimals
 Make display max at 15 numbers
 Display error message for divide by zero
 Only allow one decimal

@@ -9,78 +9,100 @@ let operator = '';
 let oneButton = document.querySelector('#one');
 oneButton.addEventListener('click', oneButtonFunc);
 function oneButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(1);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Two
 let twoButton = document.querySelector('#two');
 twoButton.addEventListener('click', twoButtonFunc);
 function twoButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(2);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Three
 let threeButton = document.querySelector('#three');
 threeButton.addEventListener('click', threeButtonFunc);
 function threeButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(3);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Four
 let fourButton = document.querySelector('#four');
 fourButton.addEventListener('click', fourButtonFunc);
 function fourButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(4);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Five
 let fiveButton = document.querySelector('#five');
 fiveButton.addEventListener('click', fiveButtonFunc);
 function fiveButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(5);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Six
 let sixButton = document.querySelector('#six');
 sixButton.addEventListener('click', sixButtonFunc);
 function sixButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(6);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Seven
 let sevenButton = document.querySelector('#seven');
 sevenButton.addEventListener('click', sevenButtonFunc);
 function sevenButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(7);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Eight
 let eightButton = document.querySelector('#eight');
 eightButton.addEventListener('click', eightButtonFunc);
 function eightButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(8);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Nine
 let nineButton = document.querySelector('#nine');
 nineButton.addEventListener('click', nineButtonFunc);
 function nineButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(9);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Number Zero
 let zeroButton = document.querySelector('#zero');
 zeroButton.addEventListener('click', zeroButtonFunc);
 function zeroButtonFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push(0);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 };
 //Decimal button
 let decimalButton = document.querySelector('#decimal');
 decimalButton.addEventListener('click', decimalFunc)
 function decimalFunc() {
+    if (selectedNumber.length <15) {
     selectedNumber.push('.');
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
 }
 //Clear button
 let clearButton = document.querySelector('#clear');
