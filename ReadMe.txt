@@ -1,18 +1,16 @@
 New features:
-Can now string together addtion, subtration, multiplication, and divison calculations.
-Fixed bugs when clicking operators multiple times or too early.
-Fixed bug when clicking equals button too early.
+User can now use decimals for calculations.
 
 Existing features:
+Add, subtract, multiply, divide, and get exponent functions.
 Can string together different operator calculations.
-Add, subtract, multiply, divide, and get exponent calculations work.
+User can use decimals.
 Basic visual design of calculator.
 Selected numbers appear in display when clicked.
 Clear button functions.
 
 Future features:
+Only allow one decimal
 Make display max at 15 numbers
-get factorial, 
-Will change sign
-Will add decimal
-Will be a fully functioning calculator! 
+Get factorial
+Be able to change sign
