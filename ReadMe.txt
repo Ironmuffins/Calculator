@@ -1,20 +1,18 @@
 New features:
-Can now get an exponent.
+Can now string together addtion, subtration, multiplication, and divison calculations.
+Fixed bugs when clicking operators multiple times or too early.
+Fixed bug when clicking equals button too early.
 
 Existing features:
-Add, subtract, multiply, divide, and get exponent work.
-Basic html and css components completed.
-Javascript math functions work.
+Can string together different operator calculations.
+Add, subtract, multiply, divide, and get exponent calculations work.
+Basic visual design of calculator.
 Selected numbers appear in display when clicked.
 Clear button functions.
-Can now type multiple digit numbers, which is stored in array.
-Both first and second numbers are stored correctly.
 
 Future features:
 Make display max at 15 numbers
-Ability to string operations together
 get factorial, 
-and get power.
 Will change sign
 Will add decimal
 Will be a fully functioning calculator! 

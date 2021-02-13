@@ -2,6 +2,7 @@ let selectedNumber = [];
 let firstNumber = 0;
 let secondNumber = 0;
 let operator = '';
+let answer = 0;
     
 //Number One
 let oneButton = document.querySelector('#one');
@@ -89,6 +90,9 @@ clearButton.addEventListener('click', clearButtonFunc);
 
 function clearButtonFunc() {
     selectedNumber = [];
+    firstNumber = 0;
+    secondNumber = 0;
+    answer = 0;
     document.querySelector('.calcDisplayDiv').innerHTML = '';
 };
 //Add button
@@ -96,36 +100,110 @@ let addButton = document.querySelector('#add');
 addButton.addEventListener('click', addFunction);
        
 function addFunction() {
+    if (answer) {
+        firstNumber = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        answer = 0;
+        operator = '+';
+    }
+    else if (firstNumber) {
+        secondNumber = parseInt(selectedNumber.join(''));
+        selectedNumber = [];
+        answer = operators[operator](firstNumber, secondNumber);
+        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        firstNumber = answer;
+        answer = 0;
+        secondNumber = 0;
+        operator = '+';
+    }
+    else {
     firstNumber = parseInt(selectedNumber.join(''));
     selectedNumber = [];
     operator = '+';
+    }
 };
 //Subtract button
 let subtractButton = document.querySelector('#subtract');
 subtractButton.addEventListener('click', subtractFunction);
        
 function subtractFunction() {
+    
+    if (answer) {
+        firstNumber = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        answer = 0;
+        operator = '-';
+    }
+    else if (firstNumber) {
+        secondNumber = parseInt(selectedNumber.join(''));
+        selectedNumber = [];
+        answer = operators[operator](firstNumber, secondNumber);
+        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        firstNumber = answer;
+        answer = 0;
+        secondNumber = 0;
+        operator = '-';
+    }
+    else {
     firstNumber = parseInt(selectedNumber.join(''));
     selectedNumber = [];
     operator = '-';
+    }
+    
 };
 //Multiply button
 let multiplyButton = document.querySelector('#multiply');
 multiplyButton.addEventListener('click', multiplyFunction);
         
 function multiplyFunction() {
+    if (answer) {
+        firstNumber = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        answer = 0;
+        operator = '*';
+    }
+    else if (firstNumber) {
+        secondNumber = parseInt(selectedNumber.join(''));
+        selectedNumber = [];
+        answer = operators[operator](firstNumber, secondNumber);
+        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        firstNumber = answer;
+        answer = 0;
+        secondNumber = 0;
+        operator = '*';
+    }
+    else {
     firstNumber = parseInt(selectedNumber.join(''));
     selectedNumber = [];
     operator = '*';
+    }
 };
 //Divide button
 let divideButton = document.querySelector('#divide');
 divideButton.addEventListener('click', divideFunction);
         
 function divideFunction() {
+    if (answer) {
+        firstNumber = answer;
+        document.querySelector('.calcDisplayDiv').innerHTML = firstNumber;
+        answer = 0;
+        operator = '/';
+    }
+    else if (firstNumber) {
+        secondNumber = parseInt(selectedNumber.join(''));
+        selectedNumber = [];
+        answer = operators[operator](firstNumber, secondNumber);
+        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        firstNumber = answer;
+        answer = 0;
+        secondNumber = 0;
+        operator = '/';
+    }
+    else {
     firstNumber = parseInt(selectedNumber.join(''));
     selectedNumber = [];
     operator = '/';
+    }
 };
 //Exponent button
 let exponentButton = document.querySelector('#exponent');
@@ -151,10 +229,17 @@ let equalsButton = document.querySelector('#equals');
 equalsButton.addEventListener('click', equalsFunction);
 
 function equalsFunction() {
+    if (firstNumber) {
     secondNumber = parseInt(selectedNumber.join(''));
-    selectedNumber = [];
-    let answer = operators[operator](firstNumber, secondNumber);
-    document.querySelector('.calcDisplayDiv').innerHTML = answer;
+    }
+    if (secondNumber) {
+        answer = operators[operator](firstNumber, secondNumber);
+        document.querySelector('.calcDisplayDiv').innerHTML = answer;
+        selectedNumber = [];
+        firstNumber = 0;
+        secondNumber = 0;
+    }
+    //firstNumber = answer;   // overwritten by operator later
 };
 
 //Operators
