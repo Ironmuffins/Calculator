@@ -10,7 +10,12 @@ Selected numbers appear in display when clicked.
 Clear button functions.
 
 Future features:
-Only allow one decimal
+Round numbers with long decimals
 Make display max at 15 numbers
-Get factorial
+Display error message for divide by zero
+Only allow one decimal
+Make it pretty
+Add backspace button
+Add keyboard support
 Be able to change sign
+Get factorial
