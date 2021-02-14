@@ -134,7 +134,7 @@ function nineButtonFunc() {
 let zeroButton = document.querySelector('#zero');
 zeroButton.addEventListener('click', zeroButtonFunc);
 function zeroButtonFunc() {
-    if (selectedNumber.length !== 1 && selectedNumber.length <15){
+    if (!(selectedNumber[0] == 0) && selectedNumber.length <15){
         selectedNumber.push(0);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }

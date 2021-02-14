@@ -1,7 +1,7 @@
 New features:
 
 New Bug fixes:
-Can no longer input multiple decimal points.
+User can now input a zero as the second digit.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
@@ -15,7 +15,6 @@ Clear button functions.
 
 Future features:
 Cap answer to certain length
-Only allow one decimal
 fix NAN bug when selecting two operators in a row
 Make it pretty
 Add backspace button
