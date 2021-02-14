@@ -148,7 +148,7 @@ function decimalFunc() {
         selectedNumber.push('.');
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-}
+};
 //Clear button
 let clearButton = document.querySelector('#clear');
 clearButton.addEventListener('click', clearButtonFunc);
@@ -159,6 +159,15 @@ function clearButtonFunc() {
     answer = 0;
     document.querySelector('.calcDisplayDiv').innerHTML = '';
 };
+//Backspace Button
+let backspaceButton = document.querySelector('#back');
+backspaceButton.addEventListener('click', backspaceFunc);
+function backspaceFunc() {
+    if (selectedNumber.length >= 1) {
+        selectedNumber.pop();
+        document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
+    }
+};;
 //Add button
 let addButton = document.querySelector('#add');
 addButton.addEventListener('click', addFunction);
@@ -330,22 +339,3 @@ let operators = {
     '/': function(a,b){return a / b},
     '**': function(a,b){return a ** b},      
 };
-    
-//   function factorial(a) {
-//       if (a === 0 || a === 1) {
-//           return 1;
-//       }
-//       else{
-//       return (a * factorial(a - 1));
-//       } 
-//   };
-
-//Factorial Button
-//let factorialButton = document.querySelector('#factorial');
-//factorialButton.addEventListener('click', factorialFunc);
-
-//function factorialFunc() {
-//    firstNumber = parseInt(selectedNumber.join(''));
-//    selectedNumber = [];
-//    operator = '!';
-//}

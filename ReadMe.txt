@@ -1,7 +1,8 @@
 New features:
+Added backspace button.
 
 New Bug fixes:
-Fixed bug when selecting two operators in a row.
+None.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
@@ -14,8 +15,7 @@ Clear button functions.
 Future features:
 Cap answer to certain length
 Fix error when pressing divide twice
+Fix error when pressing equals button multiple times
 Make it pretty
-Add backspace button
 Add keyboard support
 Be able to change sign
-Get factorial
