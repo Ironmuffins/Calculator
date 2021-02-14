@@ -1,27 +1,55 @@
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2016/03/26/05/19/fractal-1280084_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    padding-top: 200px;
+    text-align: center;
+    color: white;
+}
+
 #calculatorBody{
-    height:500px;
+    height:355px;
     width: 243px;
-}
+    justify-content: center; 
+    margin: auto;
+    background-color: white;
 
+}
 .calcDisplayDiv{
-    width: 241px;
-    height:38px;
+    display:flex;
+    align-content: flex-end;
+    flex-direction: column;
     text-align: right;
+    width: 241px;
+    min-height:50px;
     border: 1px solid grey;
-    font-size: 32px;
+    font-size: 40px;
+    background-color: white;
 }
-
 #buttons {
     display:grid;
     grid-template-rows: 60px 60px 60px 60px 60px;
     grid-template-columns: 60px 60px 60px 60px;
     grid-gap: 1px;
 }
+.numberbuttons {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(1, 189, 189);
+    color: white;
+    font-size: 22px;
+    border-radius: 3px;  
+}
 .buttons{ 
     height: 60px;
     width: 60px;
+    background-color: lightgrey;
+    font-size: 22px;
+    border-radius: 3px;  
 }
-
-#diplayone {
-    content: 1
+#equals {
+    background-color:rgb(255, 50, 50);
 }

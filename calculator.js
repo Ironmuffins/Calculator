@@ -13,7 +13,7 @@ function oneButtonFunc() {
         selectedNumber.push(1);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
     selectedNumber.push(1);
     document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -27,7 +27,7 @@ function twoButtonFunc() {
         selectedNumber.push(2);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(2);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -41,7 +41,7 @@ function threeButtonFunc() {
         selectedNumber.push(3);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(3);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -55,7 +55,7 @@ function fourButtonFunc() {
         selectedNumber.push(4);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(4);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -69,7 +69,7 @@ function fiveButtonFunc() {
         selectedNumber.push(5);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(5);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -83,7 +83,7 @@ function sixButtonFunc() {
         selectedNumber.push(6);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(6);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -97,7 +97,7 @@ function sevenButtonFunc() {
         selectedNumber.push(7);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(7);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -111,7 +111,7 @@ function eightButtonFunc() {
         selectedNumber.push(8);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(8);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -125,7 +125,7 @@ function nineButtonFunc() {
         selectedNumber.push(9);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
-    else if (selectedNumber.length <15) {
+    else if (selectedNumber.length <12) {
         selectedNumber.push(9);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -144,7 +144,7 @@ let decimalButton = document.querySelector('#decimal');
 decimalButton.addEventListener('click', decimalFunc)
 function decimalFunc() {
 
-    if (selectedNumber.length <15 && !(selectedNumber.includes('.'))) {
+    if (selectedNumber.length <12 && !(selectedNumber.includes('.'))) {
         selectedNumber.push('.');
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -174,7 +174,7 @@ addButton.addEventListener('click', addFunction);
 function addFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(8);
         answer = 0;
         operator = '+';
     }
@@ -188,7 +188,7 @@ function addFunction() {
         } else {
             selectedNumber = [];
             answer = operators[operator](firstNumber, secondNumber);
-            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(8);
             firstNumber = answer;
             answer = 0;
             secondNumber = 0;
@@ -207,7 +207,7 @@ subtractButton.addEventListener('click', subtractFunction);
 function subtractFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(8);
         answer = 0;
         operator = '-';
     }
@@ -221,7 +221,7 @@ function subtractFunction() {
         } else {
             selectedNumber = [];
             answer = operators[operator](firstNumber, secondNumber);
-            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(8);
             firstNumber = answer;
             answer = 0;
             secondNumber = 0;
@@ -240,7 +240,7 @@ multiplyButton.addEventListener('click', multiplyFunction);
 function multiplyFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(8);
         answer = 0;
         operator = '*';
     }
@@ -254,7 +254,7 @@ function multiplyFunction() {
         } else {
             selectedNumber = [];
             answer = operators[operator](firstNumber, secondNumber);
-            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(8);
             firstNumber = answer;
             answer = 0;
             secondNumber = 0;
@@ -273,7 +273,7 @@ divideButton.addEventListener('click', divideFunction);
 function divideFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(8);
         answer = 0;
         operator = '/';
     }
@@ -287,7 +287,7 @@ function divideFunction() {
         } else {
             selectedNumber = [];
             answer = operators[operator](firstNumber, secondNumber);
-            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(8);
             firstNumber = answer;
             answer = 0;
             secondNumber = 0;
@@ -314,7 +314,7 @@ equalsButton.addEventListener('click', equalsFunction);
 function equalsFunction() {
     if (answer) {
         firstNumber = answer;
-        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(13);
+        document.querySelector('.calcDisplayDiv').innerHTML = +firstNumber.toFixed(8);
         answer = 0;
     }
     else if (firstNumber) {
@@ -324,7 +324,7 @@ function equalsFunction() {
         }
         else {
         answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(8);
         selectedNumber = [];
         firstNumber = 0;
         secondNumber = 0;
