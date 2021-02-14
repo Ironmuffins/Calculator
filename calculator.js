@@ -8,7 +8,7 @@ let operator = '';
 let oneButton = document.querySelector('#one');
 oneButton.addEventListener('click', oneButtonFunc);
 function oneButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(1);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -22,7 +22,7 @@ function oneButtonFunc() {
 let twoButton = document.querySelector('#two');
 twoButton.addEventListener('click', twoButtonFunc);
 function twoButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(2);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -36,7 +36,7 @@ function twoButtonFunc() {
 let threeButton = document.querySelector('#three');
 threeButton.addEventListener('click', threeButtonFunc);
 function threeButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(3);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -50,7 +50,7 @@ function threeButtonFunc() {
 let fourButton = document.querySelector('#four');
 fourButton.addEventListener('click', fourButtonFunc);
 function fourButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(4);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -64,7 +64,7 @@ function fourButtonFunc() {
 let fiveButton = document.querySelector('#five');
 fiveButton.addEventListener('click', fiveButtonFunc);
 function fiveButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(5);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -78,7 +78,7 @@ function fiveButtonFunc() {
 let sixButton = document.querySelector('#six');
 sixButton.addEventListener('click', sixButtonFunc);
 function sixButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(6);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -92,7 +92,7 @@ function sixButtonFunc() {
 let sevenButton = document.querySelector('#seven');
 sevenButton.addEventListener('click', sevenButtonFunc);
 function sevenButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(7);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -106,7 +106,7 @@ function sevenButtonFunc() {
 let eightButton = document.querySelector('#eight');
 eightButton.addEventListener('click', eightButtonFunc);
 function eightButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(8);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -120,7 +120,7 @@ function eightButtonFunc() {
 let nineButton = document.querySelector('#nine');
 nineButton.addEventListener('click', nineButtonFunc);
 function nineButtonFunc() {
-    if (selectedNumber[0] == 0) {
+    if (selectedNumber[0] === 0) {
         selectedNumber.shift();
         selectedNumber.push(9);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
@@ -134,7 +134,7 @@ function nineButtonFunc() {
 let zeroButton = document.querySelector('#zero');
 zeroButton.addEventListener('click', zeroButtonFunc);
 function zeroButtonFunc() {
-    if (!(selectedNumber[0] == 0) && selectedNumber.length <15){
+    if (!(selectedNumber[0] === 0) && selectedNumber.length <15){
         selectedNumber.push(0);
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }
@@ -170,19 +170,21 @@ function addFunction() {
         operator = '+';
     }
     else if (firstNumber) {
-        secondNumber = parseFloat(selectedNumber.join(''));
+        if (selectedNumber.length >= 1){
+            secondNumber = parseFloat(selectedNumber.join('')); 
+        }   
         if ((secondNumber === 0) && (operator == '/')) {
             document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
-        }
-        else{
-        selectedNumber = [];
-        answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
-        firstNumber = answer;
-        answer = 0;
-        secondNumber = 0;
-        operator = '+';
-        }
+        } else if (selectedNumber.length == 0){
+        } else {
+            selectedNumber = [];
+            answer = operators[operator](firstNumber, secondNumber);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            firstNumber = answer;
+            answer = 0;
+            secondNumber = 0;
+            operator = '+';
+            }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));
@@ -201,19 +203,21 @@ function subtractFunction() {
         operator = '-';
     }
     else if (firstNumber) {
-        secondNumber = parseFloat(selectedNumber.join(''));
+        if (selectedNumber.length >= 1){
+            secondNumber = parseFloat(selectedNumber.join('')); 
+        }   
         if ((secondNumber === 0) && (operator == '/')) {
             document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
-        }
-        else{
-        selectedNumber = [];
-        answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
-        firstNumber = answer;
-        answer = 0;
-        secondNumber = 0;
-        operator = '-';
-        }
+        } else if (selectedNumber.length == 0){
+        } else {
+            selectedNumber = [];
+            answer = operators[operator](firstNumber, secondNumber);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            firstNumber = answer;
+            answer = 0;
+            secondNumber = 0;
+            operator = '-';
+            }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));
@@ -232,19 +236,21 @@ function multiplyFunction() {
         operator = '*';
     }
     else if (firstNumber) {
-        secondNumber = parseFloat(selectedNumber.join(''));
+        if (selectedNumber.length >= 1){
+            secondNumber = parseFloat(selectedNumber.join('')); 
+        }   
         if ((secondNumber === 0) && (operator == '/')) {
             document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
-        }
-        else{
-        selectedNumber = [];
-        answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
-        firstNumber = answer;
-        answer = 0;
-        secondNumber = 0;
-        operator = '*';
-        }
+        } else if (selectedNumber.length == 0){
+        } else {
+            selectedNumber = [];
+            answer = operators[operator](firstNumber, secondNumber);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            firstNumber = answer;
+            answer = 0;
+            secondNumber = 0;
+            operator = '*';
+            }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));
@@ -263,19 +269,21 @@ function divideFunction() {
         operator = '/';
     }
     else if (firstNumber) {
-        secondNumber = parseFloat(selectedNumber.join(''));
+        if (selectedNumber.length >= 1){
+            secondNumber = parseFloat(selectedNumber.join('')); 
+        }   
         if ((secondNumber === 0) && (operator == '/')) {
             document.querySelector('.calcDisplayDiv').innerHTML = 'Ow, my brain!';
-        }
-        else {
-        answer = operators[operator](firstNumber, secondNumber);
-        document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
-        selectedNumber = [];
-        secondNumber = 0;
-        firstNumber = answer;
-        answer = 0;
-        operator = '/';
-        }
+        } else if (selectedNumber.length == 0){
+        } else {
+            selectedNumber = [];
+            answer = operators[operator](firstNumber, secondNumber);
+            document.querySelector('.calcDisplayDiv').innerHTML = +answer.toFixed(13);
+            firstNumber = answer;
+            answer = 0;
+            secondNumber = 0;
+            operator = '/';
+            }
     }
     else {
     firstNumber = parseFloat(selectedNumber.join(''));

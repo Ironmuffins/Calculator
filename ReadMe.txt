@@ -1,7 +1,7 @@
 New features:
 
 New Bug fixes:
-User can now input a zero as the second digit.
+Fixed bug when selecting two operators in a row.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
@@ -11,11 +11,9 @@ Basic visual design of calculator.
 Selected numbers appear in display when clicked.
 Clear button functions.
 
-
-
 Future features:
 Cap answer to certain length
-fix NAN bug when selecting two operators in a row
+Fix error when pressing divide twice
 Make it pretty
 Add backspace button
 Add keyboard support
