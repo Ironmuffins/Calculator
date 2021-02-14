@@ -1,8 +1,10 @@
 New features:
-None
+Can no longer string multiple zeros at beggining of input.
+Zero is no longer allowed as first digit in two digit or longer numbers.
 
 Bug fixes:
 Divide by zero no longer runs, and displays message.
+Can no longer string multiple zeros at beggining of input.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
