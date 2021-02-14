@@ -143,7 +143,8 @@ function zeroButtonFunc() {
 let decimalButton = document.querySelector('#decimal');
 decimalButton.addEventListener('click', decimalFunc)
 function decimalFunc() {
-    if (selectedNumber.length <15) {
+
+    if (selectedNumber.length <15 && !(selectedNumber.includes('.'))) {
         selectedNumber.push('.');
         document.querySelector('.calcDisplayDiv').innerHTML = selectedNumber.join('');
     }

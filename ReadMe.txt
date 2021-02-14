@@ -1,10 +1,7 @@
 New features:
-Can no longer string multiple zeros at beggining of input.
-Zero is no longer allowed as first digit in two digit or longer numbers.
 
-Bug fixes:
-Divide by zero no longer runs, and displays message.
-Can no longer string multiple zeros at beggining of input.
+New Bug fixes:
+Can no longer input multiple decimal points.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
@@ -14,8 +11,9 @@ Basic visual design of calculator.
 Selected numbers appear in display when clicked.
 Clear button functions.
 
+
+
 Future features:
-Only allow one zero input at beginning of user input
 Cap answer to certain length
 Only allow one decimal
 fix NAN bug when selecting two operators in a row
