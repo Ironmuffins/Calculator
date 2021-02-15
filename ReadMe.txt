@@ -1,10 +1,10 @@
 New features:
-Added padding to mimic physical calculator
-Changed font sizes
-Changed background colors
+None.
 
 New Bug fixes:
-None.
+Tweaked hover animation.
+Fixed bug where background image wasn't taking the entire space in Firefox.
+Made borders of buttons more defined.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
