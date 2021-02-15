@@ -1,6 +1,7 @@
 New features:
-Buttons now highlight when hovered over.
-Changed exponent button to be more accurate.
+Added padding to mimic physical calculator
+Changed font sizes
+Changed background colors
 
 New Bug fixes:
 None.
@@ -14,9 +15,7 @@ Clear button.
 Backspace button.
 
 Future features:
-Highlight buttons when hovered
-add white padding on outside of calculator
-Fixing operations with number zero
+Fix incorrect operations with number zero
 Fix error when pressing divide twice
 Fix error when pressing equals button multiple times
 Add keyboard support

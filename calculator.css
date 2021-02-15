@@ -7,38 +7,58 @@ h2 {
     padding-top: 200px;
     text-align: center;
     color: white;
+    font-size: 35px;
 }
-#calculatorBody{
-    height:355px;
-    width: 243px;
+#calculatorPaddingtop {
+    height: 20px;
+    width: 275px;
+    background-color: rgba(255, 255, 255, 0.91);
     justify-content: center; 
     margin: auto;
-    background-color: white;
-
+    border-radius: 15px 15px 0px 0px;
+    border: solid black 3px;
+    border-bottom: none;
+}
+#calculatorPadding {
+    height:395px;
+    width: 275px;
+    background-color: rgba(255, 255, 255, 0.91);
+    justify-content: center; 
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+    border: solid black 3px;
+    border-top: none;
 }
 .calcDisplayDiv{
     display:flex;
     align-content: flex-end;
     flex-direction: column;
     text-align: right;
-    width: 241px;
-    min-height:50px;
-    border: 1px solid grey;
-    font-size: 40px;
+    width: 242px;
+    min-height:55px;
+    border: 2px solid black;
+    font-size: 37px;
     background-color: white;
+    border-radius: 3px;
+    justify-content: center; 
+    margin: auto;
 }
 #buttons {
     display:grid;
     grid-template-rows: 60px 60px 60px 60px 60px;
     grid-template-columns: 60px 60px 60px 60px;
-    grid-gap: 1px;
+    grid-gap: 2px;
+    padding-top: 12px;
+    justify-content: center; 
+    margin: auto;
+    
 }
 .numberbuttons {
     height: 60px;
     width: 60px;
     background-color: rgb(1, 189, 189);
     color: white;
-    font-size: 22px;
+    font-size: 23px;
     border-radius: 3px;  
 }
 .numberbuttons:hover {
@@ -46,7 +66,7 @@ h2 {
 }
 .buttons{ 
     background-color: lightgrey;
-    font-size: 22px;
+    font-size: 23px;
     border-radius: 3px;  
 }
 .buttons:hover {
