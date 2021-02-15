@@ -2,9 +2,7 @@ New features:
 None.
 
 New Bug fixes:
-Tweaked hover animation.
-Fixed bug where background image wasn't taking the entire space in Firefox.
-Made borders of buttons more defined.
+Updated link to css and js files.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
