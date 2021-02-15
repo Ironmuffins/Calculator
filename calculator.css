@@ -41,12 +41,21 @@ h2 {
     font-size: 22px;
     border-radius: 3px;  
 }
+.numberbuttons:hover {
+    background-color: rgba(1, 189, 189, 0.644);
+}
 .buttons{ 
     background-color: lightgrey;
     font-size: 22px;
     border-radius: 3px;  
 }
+.buttons:hover {
+    background-color: rgba(211, 211, 211, 0.644);
+}
 #equals {
     background-color:rgb(248, 76, 76);
     grid-column: auto / span 2;
+}
+#equals:hover {
+    background-color:rgba(248, 76, 76, 0.644);
 }
