@@ -43,6 +43,8 @@ h2 {
     border-radius: 3px;
     justify-content: center; 
     margin: auto;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 #buttons {
     display:grid;

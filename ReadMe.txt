@@ -2,7 +2,7 @@ New features:
 None.
 
 New Bug fixes:
-Updated link to css and js files.
+Calculator answers now expand the display.
 
 Existing features:
 Add, subtract, multiply, divide, and get exponent functions.
@@ -13,6 +13,7 @@ Clear button.
 Backspace button.
 
 Future features:
+When display expands size, also expand lower calculator body edge.
 Fix incorrect operations with number zero
 Fix error when pressing divide twice
 Fix error when pressing equals button multiple times
